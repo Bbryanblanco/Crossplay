@@ -13,48 +13,36 @@
       href="/Docs/media/CrossPlayFavicon.png"
       type="image/x-icon"
     />
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS (Day13) -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <!-- Bootstrap ICON -->
+    <!-- Bootstrap ICON (Day13) -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      .carousel {
-        width: 100%;
-        height: 100%;
-      }
-    </style>
   </head>
   <body style="margin: 0">
-    <!-- HEADER/NAVBAR -->
+    <!-- HEADER/NAVBAR (Day13) -->
     <div class="ps-">
       <nav
         class="navbar sticky-top navbar-expand-md"
         style="background-color: rgb(255, 191, 16)"
       >
-        <div class="container-fluid">
+        <div class="container-fluid" id="home">
           <a href="#home">
             <img
-            class="ms-5"
-            src="/Docs/media/CrossPlayNew.png"
-            alt="logo"
-            style="width: 250px; margin: -30px 20px"
-          />
+              class="ms-5"
+              src="/Docs/media/CrossPlayNew.png"
+              alt="logo"
+              style="width: 250px; margin: -30px 20px"
+            />
           </a>
-          
+
           <button
             type="button"
             class="navbar-toggler"
@@ -65,10 +53,10 @@
           </button>
           <div class="collapse navbar-collapse" id="navbar_collapse">
             <div class="navbar-nav">
-              <a href="#" class="nav-item nav-link active">Home</a>
+              <a href="#home" class="nav-item nav-link active">Home</a>
               <a href="#" class="nav-item nav-link">Products</a>
               <a href="#" class="nav-item nav-link">About Us</a>
-              <a href="#" class="nav-item nav-link">Contact Us</a>
+              <a href="#contact-us" class="nav-item nav-link">Contact Us</a>
             </div>
             <form class="d-flex">
               <div class="input-group">
@@ -84,8 +72,9 @@
           </div>
         </div>
       </nav>
+      <br />
     </div>
-    <!-- 2nd NAV BAR -->
+    <!-- 2nd NAV BAR (Day15) -->
     <nav
       class="nav nav-tabs justify-content-center sticky-top bg-white"
       style="margin: -5px 0 -20px 0"
@@ -120,7 +109,7 @@
       >
     </nav>
     <br />
-    <!-- CAROUSEL -->
+    <!-- CAROUSEL (Day15) -->
     <div
       class="carousel slide carousel"
       data-bs-ride="carousel"
@@ -162,95 +151,175 @@
       </a>
     </div>
     <br />
-    <!-- ACCORDION -->
-    <!-- <main
-      class="container accordion justify-content-center"
-      id="main-accordion"
-    >
-      <section class="accordion item">
-        <h2 class="accordion-header" id="heading">
-          <button
-            type="button"
-            class="accordion-button collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapse_1"
-          >
-            Playstation
-          </button>
-        </h2>
-        <div
-          id="collapse_1"
-          class="accordion-collapse collapse"
-          data-bs-parent="#main-accordion"
-        >
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima,
-            deleniti quis, vero reiciendis provident nesciunt fugit, pariatur
-            odio nam iure officiis? Cupiditate sit quas officiis recusandae
-            mollitia tenetur cum praesentium ipsa voluptates, qui delectus quos
-
-          </p>
+    <!-- MAIN (Day8) -->
+    <h2 class="display-3 text-center">Latest Consoles</h2>
+    <main class="container-fluid">
+      <!------------ PLAYSTATION ------------>
+      <div class="column">
+        <img class="main-img" src="/Docs/media/1-2.png" alt="photo" />
+        <div class="sticky">
+          <img
+            class="main-banner-img"
+            src="/Docs/media/playstaaionmainimg.png"
+            alt=""
+          />
         </div>
-      </section>
+        <p>
+          <img
+            class="left"
+            src="https://loremflickr.com/150/150/playstation"
+            alt="An image of fashion"
+          />
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
+          quas, porro molestiae expedita atque ex ipsum fugit excepturi libero
+          voluptatibus maiores similique saepe, quaerat inventore? Impedit ab
+          nemo, sit reiciendis perferendis pariatur beatae dolore assumenda
+          lorem50 veritatis obcaecati sint deserunt et consectetur! Nulla, rem
+          porro quasi, obcaecati, totam quas necessitatibus laborum
+          reprehenderit enim perspiciatis eum. Ab ullam quisquam necessitatibus
+          tempore. Tempora?
+          <img
+            class="right"
+            src="https://loremflickr.com/150/150/games"
+            alt="An image of fashion"
+          />
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+          fugit necessitatibus cupiditate corrupti rerum magni dolorum
+          voluptatem esse dignissimos soluta?Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Incidunt fugit necessitatibus cupiditate
+          corrupti rerum magni dolorum voluptatem esse dignissimos Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Optio aperiam consectetur
+          pariatur repudiandae consequatur ea, in labore. Exercitationem error
+          accusantium quam voluptatibus, numquam doloribus, aspernatur
+          repellendus odio minus nisi praesentium. soluta?Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit. Incidunt fugit necessitatibus
+          cupiditate corrupti rerum magni dolorum voluptatem esse dignissimos
+          soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
+          quidem, odio doloremque cum reiciendis voluptate dicta molestiae
+          veritatis illum exercitationem, incidunt magnam! Eos praesentium aut
+          mollitia, voluptate deleniti ratione laudantium eligendi quo quam
+          consectetur asperiores enim alias possimus molestias soluta dolore.
+          Sint voluptatum blanditiis omnis, vel aspernatur atque praesentium
+          optio animi corrupti corporis odit quam ut dolores id illum commodi
+          possimus? Cupiditate itaque laborum sequi natus, libero saepe expedita
+          non ad aliquam sint porro voluptatibus placeat dolorum facere
+          repudiandae corrupti. Corporis dolorum architecto, qui suscipit ipsam
+          est labore libero possimus recusandae illum harum autem delectus saepe
+          voluptatum animi, rem quasi hic accusamus sit quisquam distinctio.
+          Rerum dolor, vel eveniet repellendus, dolorum pariatur quis
+          consequuntur blanditiis fugiat iure voluptatibus ipsa id laudantium
+          molestiae deleniti aspernatur vero. Similique debitis repellendus
+          laudantium adipisci voluptatibus quaerat corrupti assumenda iure,
+          veniam deleniti quidem expedita ut cumque deserunt alias, aut rem
+          explicabo. Placeat dolore iste eius.
+        </p>
+      </div>
+      <!------------ Xbox ------------>
+      <div class="column">
+        <img class="main-img" src="/Docs/media/2-2.png" alt="" />
+        <div class="sticky"><img class="main-banner-img" src="/Docs/media/xboxmainimg.png" alt=""></div>
+        <p>
+          <img
+            class="left"
+            src="https://loremflickr.com/150/150/games"
+            alt="An image of animal"
+          />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro commodi
+          temporibus laudantium assumenda voluptatum consequatur accusamus quae
+          obcaecati rerum labore Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quam corporis omnis voluptatum ipsa explicabo
+          aspernatur, expedita iusto optio dolorem animi nostrum nulla dolore
+          nam, mollitia odio quidem magni et quasi, consequatur cupiditate iste?
+          Quam tempore eos laborum ratione ex est necessitatibus facere eaque
+          reiciendis et voluptas, esse voluptatibus obcaecati explicabo?
+          <img
+            class="left"
+            src="https://loremflickr.com/150/150/consoles"
+            alt="An image of animal"
+          />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+          accusamus velit enim illum fuga? Beatae vero, mollitia blanditiis quos
+          iure dicta eos quo maiores voluptates in repellat quas iusto nesciunt
+          ducimus? Fugit voluptatum esse dignissimos, aut rerum earum laboriosam
+          quia rem dolorem delectus illo eveniet, ea consequatur alias.
+          Adipisci, velit. Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Esse dolore minima dolorem cum quaerat quae odio aperiam,
+          repellendus excepturi impedit. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Error velit impedit illo adipisci numquam eaque hic
+          earum praesentium deserunt maxime, aliquid neque similique consequatur
+          fuga iure ea labore iste distinctio natus voluptas expedita?
+          Repellendus est totam veniam dicta quod quam reiciendis velit facilis,
+          vero consequuntur vitae, corrupti minus quaerat id dignissimos saepe
+          quae eum voluptatum. Numquam molestias quibusdam perspiciatis natus
+          aliquam possimus aliquid incidunt ab ea doloremque non id, placeat cum
+          adipisci. Necessitatibus, voluptatum! Sequi harum, enim fugiat quis
+          hic esse corrupti corporis odio quisquam nobis iusto vero iure eveniet
+          aspernatur beatae explicabo, a dolor earum eaque voluptates magnam?
+          Esse consequuntur expedita sit quidem. Cumque natus repudiandae
+          suscipit in dolore unde ratione perspiciatis ex ipsum quasi rerum
+          quibusdam sunt fugiat nesciunt voluptatibus nulla, possimus
+          praesentium. Iusto impedit voluptas, libero aperiam facere cupiditate.
+          Vel labore qui quos, natus cupiditate perspiciatis. Ullam quam
+          consequuntur consequatur, voluptas culpa qui! Soluta eaque ullam
+          vitae.
+        </p>
+      </div>
+
+      <div class="column">
+        <img class="main-img" src="/Docs/media/3-2.png" alt="" />
+        <div class="sticky"><img class="main-banner-img" src="/Docs/media/nintendomainimg.png" alt=""></div>
+        <p>
+          <img
+            class="right"
+            src="https://loremflickr.com/150/150/sports"
+            alt=""
+          />
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+          voluptatum iusto itaque. Exercitationem odit reiciendis nam beatae
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+          vitae odio dolorum repellendus maxime laborum possimus iste totam
+          voluptates excepturi! mollitia numquam quibusdam esse officiis, saepe
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+          porro cumque dolore sapiente autem ad delectus tempore, recusandae
+          quos iusto.
+          <img
+            class="right"
+            src="https://loremflickr.com/150/150/sports"
+            alt="An image od Sports"
+          />
+          Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Incidunt fugit necessitatibus cupiditate
+          corrupti rerum magni dolorum voluptatem esse dignissimos soluta?Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fugit
+          necessitatibus cupiditate corrupti rerum magni dolorum voluptatem esse
+          dignissimos soluta?Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Incidunt fugit necessitatibus cupiditate corrupti rerum magni
+          dolorum voluptatem esse dignissimos soluta?adipisicing elit. Inventore
+          consequuntur corporis eum veniam, sit omnis ut maiores consequatur
+          laudantium voluptatum! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Ab voluptate explicabo perspiciatis nostrum?
+          Cupiditate officiis dolorem est odit placeat ex. Quam mollitia
+          delectus ducimus vero praesentium. Eligendi totam deleniti,
+          consequatur earum praesentium ex fugit ad et deserunt quae veritatis
+          excepturi similique. Ipsam rerum iure accusamus nulla perspiciatis
+          esse recusandae! Repudiandae, in atque amet possimus id eaque nisi
+          quidem, eos aspernatur nemo minus, deleniti nam. Dolorem id molestias
+          molestiae? Explicabo itaque eligendi officiis minus porro animi
+          perferendis! Dicta mollitia, dolor reprehenderit molestiae asperiores
+          in nisi, nostrum ad, necessitatibus voluptatem omnis atque cupiditate
+          itaque autem veniam laudantium eos repellat natus quaerat. Deleniti
+          autem temporibus rerum sit similique assumenda obcaecati maiores
+          reprehenderit dicta fuga, quas, quo eum cumque, voluptatem rem id
+          labore fugiat ab ipsum ipsam voluptates perspiciatis possimus
+          distinctio! In facilis corporis consectetur maiores quas sed quidem
+          perferendis, reiciendis aperiam cumque necessitatibus ex, mollitia,
+          deserunt vitae id beatae quia iste ipsum sequi?
+        </p>
+      </div>
     </main>
-    <main class="container accordion" id="main-accordion">
-      <section class="accordion item">
-        <h2 class="accordion-header" id="heading">
-          <button
-            type="button"
-            class="accordion-button collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapse_2"
-          >
-            Xbox
-          </button>
-        </h2>
-        <div
-          id="collapse_2"
-          class="accordion-collapse collapse"
-          data-bs-parent="#main-accordion"
-        >
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima,
-            deleniti quis, vero reiciendis provident nesciunt fugit, pariatur
-            odio nam iure officiis? Cupiditate sit quas officiis recusandae
-            mollitia tenetur cum praesentium ipsa voluptates, qui delectus quos
-
-          </p>
-        </div>
-      </section>
-    </main>
-    <main class="container accordion" id="main-accordion">
-      <section class="accordion item">
-        <h2 class="accordion-header" id="heading">
-          <button
-            type="button"
-            class="accordion-button collapsed show"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapse_3"
-          >
-            Nintendo
-          </button>
-        </h2>
-        <div
-          id="collapse_3"
-          class="accordion-collapse collapse"
-          data-bs-parent="#main-accordion"
-        >
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima,
-            deleniti quis, vero reiciendis provident nesciunt fugit, pariatur
-            odio nam iure officiis? Cupiditate sit quas officiis recusandae
-
-          </p>
-        </div>
-      </section>
-    </main> -->
     <br />
     <!--1st SECTION  -->
-    <div class="container-fluid justify-content-center">
-      <h3 class="display-5 latest-consoles ms-4">Latest Consoles</h3>
-    </div>
+    <div class="container-fluid justify-content-center"></div>
     <div class="row row-cols-1 row-cols-md-3 pb-0 justify-content-center">
       <!------------------ PLAYSTATION -------------------->
       <div class="col">
@@ -264,56 +333,6 @@
               triggers1 and 3D Audio*, and an all-new generation of incredible
               PlayStation games.
             </p>
-            <main
-              class="container accordion justify-content-center"
-              id="main-accordion"
-            >
-              <section class="accordion item">
-                <h2 class="accordion-header" id="heading">
-                  <button
-                    type="button"
-                    class="accordion-button collapsed"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse_1"
-                  >
-                    <h5>Read more</h5>
-                  </button>
-                </h2>
-                <div
-                  id="collapse_1"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#main-accordion"
-                >
-                  <p class="row-cols-md-2">
-                    <dl class="row">
-                      <dt class="col-sm-12">Haptic Feedback</dt>
-                      <dd class="col-sm-12">
-                        Responsive vibrations react to your in‑game choices and simulate environmental factors in select PS5 games.
-                      </dd>
-                      <br>
-                      <dt class="col-sm-12">Ray Tracing</dt>
-                      <dd class="col-sm-12">
-                        Ray Tracing brings new levels of realism with natural shadows and reflections in supported PS5 games.
-                      </dd>
-                      <br>
-                      <dt class="col-sm-12">Adaptive triggers</dt>
-                      <dd class="col-sm-12">
-                        The PlayStation 5’s DualSense controller is an incredible input device, perhaps the most tangible example 
-                        of “next-gen” gaming the new wave of consoles has offered to date. But you won’t necessarily see the upgrades 
-                        just from looking at Sony’s controller.
-                        It turns out that the answer to revolutionizing the controller isn’t to add more buttons but to make the ones we already have offer 
-                        a deeper, better experience. 
-                      </dd>
-                      <br>
-                      <dt class="col-sm-12">PULSE 3D™ Wireless Headset</dt>
-                      <dd class="col-sm-12">
-                        Enjoy a seamless, wireless experience with a headset fine-tuned for 3D Audio on PS5 consoles.1 The PULSE 3D wireless headset features a refined design with dual noise-cancelling microphones, USB Type-C® charging, and an array of easy-access controls.
-                      </dd>
-                    </dl>
-                  </p>
-                </div>
-              </section>
-            </main>
           </div>
         </div>
       </div>
@@ -323,41 +342,12 @@
           <img src="/Docs/media/2-2.png" alt="" />
           <div class="card-body">
             <h5 class="card-title">X-Box Series</h5>
-            <p class="card-text text-capitalize">THE FASTEST, MOST POWERFUL XBOX <br>
-              Get ready for faster load times, higher resolution, more stable frame
-              rates, and better input latency on thousands of Xbox One, Xbox 360, and Original Xbox games.
+            <p class="card-text text-capitalize">
+              THE FASTEST, MOST POWERFUL XBOX <br />
+              Get ready for faster load times, higher resolution, more stable
+              frame rates, and better input latency on thousands of Xbox One,
+              Xbox 360, and Original Xbox games.
             </p>
-
-            <main
-              class="container accordion justify-content-center"
-              id="main-accordion"
-            >
-              <section class="accordion item">
-                <h2 class="accordion-header" id="heading">
-                  <button
-                    type="button"
-                    class="accordion-button collapsed"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse_2"
-                  >
-                    <h5>Read more</h5>
-                  </button>
-                </h2>
-                <div
-                  id="collapse_2"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#main-accordion"
-                >
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Minima, deleniti quis, vero reiciendis provident nesciunt
-                    fugit, pariatur odio nam iure officiis? Cupiditate sit quas
-                    officiis recusandae mollitia tenetur cum praesentium ipsa
-                    voluptates, qui delectus quos
-                  </p>
-                </div>
-              </section>
-            </main>
           </div>
         </div>
       </div>
@@ -368,39 +358,11 @@
           <div class="card-body">
             <h5 class="card-title">Nintendo Switch Oled</h5>
             <p class="card-text">
-              A game console you can enjoy anytime, anywhere with anyone that transforms, Take the game you're playing at home on the move with you.
-              Remove your Switch from its dock to take it with you, just like a handheld game console.
+              A game console you can enjoy anytime, anywhere with anyone that
+              transforms, Take the game you're playing at home on the move with
+              you. Remove your Switch from its dock to take it with you, just
+              like a handheld game console.
             </p>
-            <main
-              class="container accordion justify-content-center"
-              id="main-accordion"
-            >
-              <section class="accordion item">
-                <h2 class="accordion-header" id="heading">
-                  <button
-                    type="button"
-                    class="accordion-button collapsed"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse_3"
-                  >
-                    <h5 class="display-8">Read more</h5>
-                  </button>
-                </h2>
-                <div
-                  id="collapse_3"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#main-accordion"
-                >
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Minima, deleniti quis, vero reiciendis provident nesciunt
-                    fugit, pariatur odio nam iure officiis? Cupiditate sit quas
-                    officiis recusandae mollitia tenetur cum praesentium ipsa
-                    voluptates, qui delectus quos
-                  </p>
-                </div>
-              </section>
-            </main>
           </div>
         </div>
       </div>
@@ -470,6 +432,141 @@
       <div class="col">7</div>
       <div class="col">8</div> -->
     </div>
+    <div class="content container-fluid">
+      <section>
+        <div class="div-sticky">
+          <h2>Scroll effect testing</h2>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+          repudiandae sit quos eius, repellat, sint dicta ipsum, praesentium
+          adipisci quibusdam tenetur nesciunt. Omnis expedita, perferendis
+          eaque, voluptatum magnam veniam dolorum minima inventore sint,
+          corporis fuga consectetur et recusandae incidunt. Recusandae facilis
+          minima sint incidunt ad blanditiis deleniti dolores repellat
+          reiciendis? Velit temporibus sequi iure, quam, tempore architecto
+          nihil eligendi inventore nostrum mollitia nesciunt fuga commodi nisi
+          ea. Laudantium delectus dignissimos blanditiis culpa repellendus. Ea
+          quis, id odit quos suscipit consequatur blanditiis. Optio beatae quia
+          quod veniam iste maiores obcaecati, consequatur labore animi, quo
+          reprehenderit unde exercitationem iusto veritatis dolore magni!
+        </p>
+      </section>
+      <section>
+        <div class="div-sticky"><h2>Scroll effect testing</h2></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum unde,
+          nihil temporibus quisquam eos nesciunt. Repellendus, fuga nesciunt,
+          pariatur temporibus eveniet impedit libero deserunt dolore
+          voluptatibus explicabo expedita, omnis perspiciatis debitis laborum
+          ullam natus architecto qui! Quos et assumenda, eligendi quis mollitia
+          debitis iusto, possimus numquam corporis id accusamus unde perferendis
+          atque similique pariatur a amet nisi. Quo magni adipisci id cum vitae
+          quae recusandae ad veritatis animi, hic deleniti minus debitis natus
+          at accusamus velit quam voluptatum fugit iste. Esse, quam deserunt
+          ipsum possimus veniam laboriosam fugit iste totam nostrum est facilis
+          dignissimos eligendi magni earum ut harum consequatur!
+        </p>
+      </section>
+      <section>
+        <div class="div-sticky"><h2>Scroll effect testing</h2></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          aperiam similique quidem labore saepe! Quisquam consectetur dicta ad,
+          quod laborum assumenda! Assumenda, eum! Rerum architecto cumque
+          incidunt saepe, temporibus voluptates similique dolores, laudantium
+          beatae alias placeat illo explicabo sit aliquid odio animi officiis
+          magni suscipit cum? Iure laborum minima, excepturi soluta
+          exercitationem adipisci animi, unde facilis inventore incidunt nam
+          dicta. Magni praesentium perspiciatis provident incidunt ipsa dolores
+          consectetur. Laborum ipsam, corporis dolorum mollitia neque laboriosam
+          exercitationem corrupti velit iure voluptatem in praesentium earum
+          tenetur tempore, nulla at ab, unde suscipit eum excepturi! Libero
+          iusto natus consectetur quaerat amet quasi harum.
+        </p>
+      </section>
+    </div>
+
+    <!------------ Footer Sticky ------------>
+    <div class="footer-div">
+      <div class="footer-content">
+        <h2 class="title">Footer scroll bottom</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eveniet
+          corporis a similique id, quo aliquid perferendis esse explicabo
+          voluptate quidem nisi doloremque enim reiciendis distinctio
+          repudiandae inventore quos iure quae rerum impedit qui. Maxime culpa
+          quibusdam laboriosam earum veritatis iste officia ut aliquam atque,
+          harum ducimus eius molestias accusantium eligendi voluptas quo,
+          repellendus minima odio assumenda reiciendis doloribus ea? Eaque
+          molestiae voluptatem repellat. Quia, cumque, dolor provident excepturi
+          quod similique iure officiis ipsa magnam vitae eius sequi sapiente,
+          iste explicabo sunt recusandae velit? Exercitationem esse enim harum
+          ipsa blanditiis a quaerat ipsam! Ullam, a odit numquam sapiente
+          necessitatibus aut?
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint fugit
+          modi ducimus cum expedita error doloremque rerum odit, qui maiores
+          architecto cumque dolorem, recusandae, voluptas dolores sapiente
+          dolor! Sint corrupti corporis soluta, cupiditate, ratione totam quia
+          iusto asperiores quidem harum, laborum ex. At aliquid laborum, quos
+          non qui voluptatibus cupiditate, esse obcaecati culpa est modi
+          deleniti? Sequi eos ipsum sunt, inventore accusamus aperiam, modi id
+          dicta quo voluptate deleniti omnis maiores hic excepturi facere
+          similique delectus adipisci repudiandae laudantium obcaecati
+          voluptates reiciendis! Hic odit animi, totam nobis laudantium harum
+          voluptatum placeat ut mollitia voluptatibus unde? Maxime illum optio
+          suscipit iste.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut quod
+          quaerat et delectus accusamus asperiores ab suscipit qui assumenda
+          architecto pariatur veniam ipsum distinctio magnam harum in molestias
+          laboriosam, expedita, aspernatur quibusdam doloremque id alias omnis.
+          Adipisci, corrupti sed placeat esse autem eius? Tempora officia
+          laborum quibusdam earum dolore architecto quod at vitae eveniet
+          voluptates. Eveniet, iure provident at repellendus cum atque
+          asperiores expedita aut rem quibusdam, laboriosam illo magnam minima,
+          ullam cumque error ut a nihil perspiciatis vitae totam voluptas rerum.
+          Voluptas nemo vel culpa delectus impedit. Quam sequi, optio fugiat a
+          mollitia quae blanditiis ea tempora sapiente?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+          voluptatem quis ratione officiis, commodi cum culpa molestiae
+          excepturi veritatis suscipit. At esse amet ex iste incidunt. Earum,
+          quia iusto veritatis ratione cum nostrum doloribus omnis dicta
+          pariatur quibusdam eligendi ab soluta sapiente culpa incidunt optio
+          autem, fuga explicabo ad corrupti animi facilis rerum. Deleniti
+          placeat sequi dolores ea et enim sint commodi qui eos molestias
+          aspernatur consequatur incidunt similique, error id laboriosam dicta
+          voluptatibus quos quae repellendus, illo esse distinctio aut ipsa.
+          Reiciendis illo eius nisi dicta fugit tempora expedita debitis
+          repellendus architecto ex recusandae minus voluptatum, ipsum, eaque
+          aliquid.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+          placeat impedit commodi nemo, fugit voluptatum possimus fugiat numquam
+          necessitatibus? Totam dolores exercitationem repudiandae dicta
+          deserunt fugiat facilis a, deleniti doloremque ea aperiam quae non
+          cupiditate possimus voluptatum consequuntur aliquam sed culpa earum
+          eligendi, debitis perferendis accusamus enim dolorem! Voluptatibus,
+          error sunt a provident exercitationem nostrum tempore veritatis labore
+          at obcaecati aperiam quos, quis aut eveniet enim magnam officiis
+          cupiditate neque sit officia harum? Earum est quis sint quasi
+          recusandae dolores optio repellendus porro? Necessitatibus quas est
+          nobis atque debitis cum voluptatibus repudiandae, corporis omnis error
+          officia nemo ipsam numquam eaque.
+        </p>
+      </div>
+      <h2 class="footer-sticky">Footer Sticky</h2>
+    </div>
+
+    <footer id="contact-us" class="lower-footer">
+      Copyright &copy;. All rights reseved &reg;
+    </footer>
 
     <!-- JavaScript Bundle with Popper -->
     <script
