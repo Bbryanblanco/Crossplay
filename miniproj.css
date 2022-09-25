@@ -14,6 +14,11 @@ html {
     height: 100%;
 }
 
+.carousel img {
+    width: 1500px;
+    height: 500px;
+}
+
 
 .column {
     padding: 15px;
@@ -52,28 +57,6 @@ html {
     margin-bottom: -40px;
 
 }
-
-
-
-footer {
-    float: left;
-    background-color: rgb(255, 191, 16);
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-}
-
-.left {
-    float: left;
-    padding: 10px;
-}
-
-.right {
-    float: right;
-    padding: 10px;
-}
-
-
 
 
 .content {
@@ -130,24 +113,158 @@ section p {
     z-index: -1;
 }
 
+footer {
+    float: left;
+    background-color: rgb(255, 191, 16);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.left {
+    float: left;
+    padding: 10px;
+}
+
+.right {
+    float: right;
+    padding: 10px;
+}
+
+
 .lower-footer {
     font-size: 20px;
 }
 
-@media screen and (min-width:320px) and (max-with:740px) {
+@media screen and (min-width:320px) and (max-width:370px) {
+    .logo {
+        width: 500px;
+    }
+    
+    .carousel {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel img {
+        width: 340px;
+        height: 150px;
+    }
+
+
     .column {
         padding: 15px;
         float: left;
-        width: 33.33%;
-        height: 75vh;
+        width: 100%;
+        height: 72vh;
         overflow: auto;
         display: flex;
         flex-wrap: wrap;
     }
-    
+
     .column h2 {
         font-size: 40px;
-    
-    
+    }
+
+    .main-img {
+        width: 250px;
+    }
+
+    .sticky {
+        margin-top: -50px;
+        position: sticky;
+        top: -5%;
+        padding: 20px;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .main-banner-img {
+        width: 250px;
+        position: relative;
+        top: -30px;
+        left: -20px;
+        margin-bottom: -40px;
+
+    }
+
+
+    .content {
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    section {
+        display: grid;
+        grid: auto / 200px 1fr;
+        grid-gap: 0 2em;
+    }
+
+    section p {
+        grid-column: 2/3;
+
+
+    }
+    .div-sticky {
+        grid-column: 1/2;
+        text-align: right;
+        align-self: start;
+        top: 1em;
+        position: sticky;
+        top: 6%;
+        background-color: blue;
+    }
+
+
+    .footer-div {
+        width: 100%;
+        max-width: px;
+        margin: 0 auto;
+    }
+
+    .footer-content {
+        background-color: #fff;
+        padding: 2em;
+    }
+
+    .footer-sticky {
+        background-color: #e4000f;
+        padding: 1em;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 1.5em;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+
+        position: sticky;
+        bottom: 40px;
+        z-index: -1;
+    }   
+
+    footer {
+        float: left;
+        background-color: rgb(255, 191, 16);
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .left {
+        float: left;
+        padding: 10px;
+    }
+
+    .right {
+        float: right;
+        padding: 10px;
+    }
+
+
+    .lower-footer {
+        font-size: 20px;
     }
 }
