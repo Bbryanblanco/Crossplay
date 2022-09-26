@@ -17,3 +17,9 @@ move
 food
 relax
 sleep
+
+
+LOGO Color code
+red #e4000f
+white #fffff
+black #00000

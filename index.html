@@ -7,6 +7,9 @@
     <title>Cross Play</title>
     <!-- External CSS -->
     <link rel="stylesheet" href="miniproj.css" />
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <!-- FAVICON -->
     <link
       rel="shortcut icon"
@@ -25,8 +28,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
+    <!-- Flickity -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
-  <body style="margin: 0">
+
+  <body>
+    <!------------------ Hero Section-------------------->
     <!-- HEADER/NAVBAR (Day13) -->
     <div class="ps-">
       <nav
@@ -35,13 +45,8 @@
       >
         <div class="container-fluid" id="home">
           <a href="#home">
-            <!------------ LOGO ------------>
-            <img
-              class="logo"
-              src="/Docs/media/CrossPlayNew.png"
-              alt="logo"
-              style="width: 250px; margin: -30px 20px"
-            />
+            <!-- LOGO -->
+            <img class="logo" src="/Docs/media/CrossPlayNew.png" alt="logo" />
           </a>
 
           <button
@@ -127,25 +132,41 @@
         <li data-bs-target="#divcarousel" data-bs-slide-to="3"></li>
         <li data-bs-target="#divcarousel" data-bs-slide-to="4"></li>
         <li data-bs-target="#divcarousel" data-bs-slide-to="5"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="6"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="7"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="8"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="9"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="/Docs/media/1.png" alt="Playstation image" />
+          <img src="/Docs/media/carouselimg1.png" alt="Playstation image" />
         </div>
         <div class="carousel-item">
-          <img src="/Docs/media/2.png" alt="X-box image" />
+          <img src="/Docs/media/carouselimg2.png" alt="X-box image" />
         </div>
         <div class="carousel-item">
-          <img src="/Docs/media/3.png" alt="Nintendo" />
+          <img src="/Docs/media/carouselimg3.png" alt="Nintendo" />
         </div>
         <div class="carousel-item">
-          <img src="/Docs/media/carouselimg0.png" alt="Nintendo" />
+          <img src="/Docs/media/carouselimg4.png" alt="Nintendo" />
         </div>
         <div class="carousel-item">
-          <img src="/Docs/media/carouselimg1.png" alt="Nintendo" />
+          <img src="/Docs/media/carouselimg5.png" alt="Nintendo" />
         </div>
         <div class="carousel-item">
-          <img src="/Docs/media/carouselimg2.png" alt="Nintendo" />
+          <img src="/Docs/media/carouselimg6.png" alt="Nintendo" />
+        </div>
+        <div class="carousel-item">
+          <img src="/Docs/media/carouselimg7.png" alt="Nintendo" />
+        </div>
+        <div class="carousel-item">
+          <img src="/Docs/media/carouselimg8.png" alt="Nintendo" />
+        </div>
+        <div class="carousel-item">
+          <img src="/Docs/media/carouselimg9.png" alt="Nintendo" />
+        </div>
+        <div class="carousel-item">
+          <img src="/Docs/media/carouselimg10.png" alt="Nintendo" />
         </div>
       </div>
       <a
@@ -164,7 +185,8 @@
       </a>
     </div>
     <br /><br />
-    <!-- MAIN (Day8) -->
+
+    <!---------------------- 2nd section (Day8) --------------------------->
     <h2 class="display-5 text-center">Latest Consoles</h2>
     <br />
     <main class="container-fluid">
@@ -284,7 +306,7 @@
           vitae.
         </p>
       </div>
-
+      <!------------ Nintendo ------------>
       <div class="column">
         <img class="main-img" src="/Docs/media/3-2.png" alt="" />
         <div class="sticky">
@@ -344,120 +366,256 @@
       </div>
     </main>
     <br />
-    <!--1st SECTION  -->
-    <div class="container-fluid justify-content-center"></div>
-    <div class="row row-cols-1 row-cols-md-3 pb-0 justify-content-center">
-      <!------------------ PLAYSTATION -------------------->
-      <div class="col">
-        <div class="card bg-primary text-white m-5">
-          <img src="/Docs/media/1-2.png" alt="photo" />
-          <div class="card-body">
-            <h5 class="card-title">Playstation 5</h5>
-            <p class="card-text">
-              Experience lightning-fast loading with an ultra-high speed SSD,
-              deeper immersion with support for haptic feedback1, adaptive
-              triggers1 and 3D Audio*, and an all-new generation of incredible
-              PlayStation games.
+    <br />
+    <!-----------------------3rd Section (Product)-------------------------->
+    <section class="product">
+      <h2 class="product-category">best selling</h2>
+      <button class="pre-btn">
+        <img src="/Docs/media/arrow.png" alt="" />
+      </button>
+      <button class="nxt-btn">
+        <img src="/Docs/media/arrow.png" alt="" />
+      </button>
+      <div class="product-container">
+        <img class="bg-img" src="/Docs/media/backgrroundimg.png" alt="" />
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="/Docs/media/ProductPS5.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">PS5</h2>
+            <p class="product-short-description">
+              Disc edition of playstation 5
             </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="/Docs/media/ProductPS5Digi.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">PS5 Digital edt.</h2>
+            <p class="product-short-description">
+              Digital edition of playstation 5
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="/Docs/media/ProductDualSenseEdge.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Dual Sense Edge</h2>
+            <p class="product-short-description">
+              The new controller for playstation 5
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="/Docs/media/ProductXBOXX.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">X-BOX Series X</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="/Docs/media/ProductXBOXS.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">X-BOX Series S</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="/Docs/media/ProductXController.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Controller</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="/Docs/media/ProductNintendoOled.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Nintendo Switch Oled</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="/Docs/media/ProductNintendoSwitch.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Nintendo Switch</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="/Docs/media/ProductJoycon.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Joyson</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
           </div>
         </div>
       </div>
-      <!------------------ X-BOX -------------------->
-      <div class="col">
-        <div class="card bg-success text-white m-5">
-          <img src="/Docs/media/2-2.png" alt="" />
-          <div class="card-body">
-            <h5 class="card-title">X-Box Series</h5>
-            <p class="card-text text-capitalize">
-              THE FASTEST, MOST POWERFUL XBOX <br />
-              Get ready for faster load times, higher resolution, more stable
-              frame rates, and better input latency on thousands of Xbox One,
-              Xbox 360, and Original Xbox games.
-            </p>
-          </div>
-        </div>
+    </section>
+    <br />
+
+    <!-----------------------4th Section (Games Carousel)-------------------------->
+
+    <h1 class="display-5 mt-3 text-center">Latest Games</h1>
+    <div class="game-carousel mt-3">
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesps1.png" alt="games" />
       </div>
-      <!------------------ NINTENTO -------------------->
-      <div class="col">
-        <div class="card bg-danger text-white m-5">
-          <img src="/Docs/media/3-2.png" alt="" />
-          <div class="card-body">
-            <h5 class="card-title">Nintendo Switch Oled</h5>
-            <p class="card-text">
-              A game console you can enjoy anytime, anywhere with anyone that
-              transforms, Take the game you're playing at home on the move with
-              you. Remove your Switch from its dock to take it with you, just
-              like a handheld game console.
-            </p>
-          </div>
-        </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesps2.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesps3.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesps4.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesps5.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesxbox1.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesxbox2.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesxbox3.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesxbox4.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesxbox5.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesnintendo1.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesnintendo2.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesnintendo3.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesnintendo4.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesnintendo5.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesnintendo6.png" alt="games" />
+      </div>
+      <div class="game-carousel-cell">
+        <img src="/Docs/media/gamesnintendo7.png" alt="games" />
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 p-5">
-      <div class="col">
-        <div class="card bg-danger text-white m-4">
-          <div class="card-body">
-            <h5 class="card-title">Danger card</h5>
-            <p class="card-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-              nobis?
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card border-warning text-warning m-4">
-          <div class="card-body">
-            <h5 class="card-title">Warning card</h5>
-            <p class="card-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-              nobis?
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card bg-info text-white m-4">
-          <div class="card-body">
-            <h5 class="card-title">Info card</h5>
-            <p class="card-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-              nobis?
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card bg-dark text-white m-4">
-          <div class="card-body">
-            <h5 class="card-title">Dark card</h5>
-            <p class="card-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-              nobis?
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card bg-light m-4">
-          <div class="card-body">
-            <h5 class="card-title">Light card</h5>
-            <p class="card-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-              nobis?
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col">3</div>
-      <div class="col">4</div>
-      <div class="col">5</div>
-      <div class="col">6</div>
-      <div class="col">7</div>
-      <div class="col">8</div> -->
-    </div>
+
+
+
+
+
+    <!----------------------- 5th Section -------------------------->
+
+    <section class="container-fliud">
+      
+    </section>
+
+
+
+
+
+
     <!-- <div class="content container-fluid">
       <section>
         <div class="div-sticky">
@@ -531,61 +689,6 @@
           ipsa blanditiis a quaerat ipsam! Ullam, a odit numquam sapiente
           necessitatibus aut?
         </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint fugit
-          modi ducimus cum expedita error doloremque rerum odit, qui maiores
-          architecto cumque dolorem, recusandae, voluptas dolores sapiente
-          dolor! Sint corrupti corporis soluta, cupiditate, ratione totam quia
-          iusto asperiores quidem harum, laborum ex. At aliquid laborum, quos
-          non qui voluptatibus cupiditate, esse obcaecati culpa est modi
-          deleniti? Sequi eos ipsum sunt, inventore accusamus aperiam, modi id
-          dicta quo voluptate deleniti omnis maiores hic excepturi facere
-          similique delectus adipisci repudiandae laudantium obcaecati
-          voluptates reiciendis! Hic odit animi, totam nobis laudantium harum
-          voluptatum placeat ut mollitia voluptatibus unde? Maxime illum optio
-          suscipit iste.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut quod
-          quaerat et delectus accusamus asperiores ab suscipit qui assumenda
-          architecto pariatur veniam ipsum distinctio magnam harum in molestias
-          laboriosam, expedita, aspernatur quibusdam doloremque id alias omnis.
-          Adipisci, corrupti sed placeat esse autem eius? Tempora officia
-          laborum quibusdam earum dolore architecto quod at vitae eveniet
-          voluptates. Eveniet, iure provident at repellendus cum atque
-          asperiores expedita aut rem quibusdam, laboriosam illo magnam minima,
-          ullam cumque error ut a nihil perspiciatis vitae totam voluptas rerum.
-          Voluptas nemo vel culpa delectus impedit. Quam sequi, optio fugiat a
-          mollitia quae blanditiis ea tempora sapiente?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-          voluptatem quis ratione officiis, commodi cum culpa molestiae
-          excepturi veritatis suscipit. At esse amet ex iste incidunt. Earum,
-          quia iusto veritatis ratione cum nostrum doloribus omnis dicta
-          pariatur quibusdam eligendi ab soluta sapiente culpa incidunt optio
-          autem, fuga explicabo ad corrupti animi facilis rerum. Deleniti
-          placeat sequi dolores ea et enim sint commodi qui eos molestias
-          aspernatur consequatur incidunt similique, error id laboriosam dicta
-          voluptatibus quos quae repellendus, illo esse distinctio aut ipsa.
-          Reiciendis illo eius nisi dicta fugit tempora expedita debitis
-          repellendus architecto ex recusandae minus voluptatum, ipsum, eaque
-          aliquid.
-        </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
-          placeat impedit commodi nemo, fugit voluptatum possimus fugiat numquam
-          necessitatibus? Totam dolores exercitationem repudiandae dicta
-          deserunt fugiat facilis a, deleniti doloremque ea aperiam quae non
-          cupiditate possimus voluptatum consequuntur aliquam sed culpa earum
-          eligendi, debitis perferendis accusamus enim dolorem! Voluptatibus,
-          error sunt a provident exercitationem nostrum tempore veritatis labore
-          at obcaecati aperiam quos, quis aut eveniet enim magnam officiis
-          cupiditate neque sit officia harum? Earum est quis sint quasi
-          recusandae dolores optio repellendus porro? Necessitatibus quas est
-          nobis atque debitis cum voluptatibus repudiandae, corporis omnis error
-          officia nemo ipsam numquam eaque.
-        </p>
       </div>
       <h2 class="footer-sticky">Footer Sticky</h2>
     </div>
@@ -594,11 +697,23 @@
       Copyright &copy;. All rights reseved &reg;
     </footer>
 
-    <!-- JavaScript Bundle with Popper -->
+    <!------------ JS Links ------------>
+    <script src="miniproj.js"></script>
+    <!-- Bootstrap JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+    <!-- Flickity -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script type="text/javascript">
+      $(".game-carousel").flickity({
+        // options
+        cellAlign: "left",
+        wrapAround: true,
+        freeScroll: true,
+      });
+    </script>
   </body>
 </html>
