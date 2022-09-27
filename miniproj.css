@@ -319,32 +319,61 @@ section p {
 
 
 
-/* -----------------4th Section (Games carousel)------------------ */
+/* -----------4th Section (Games carousel)----------- */
 
 .game-carousel-cell > img {
   width: 450px;
 }
 
 
+/* ------ 5th Section (Featured Consoles) ---------- */
 
+.bannervideo {
+  width: 100vw;
+}
 
+/* ------ 6th Section ---------- */
+
+.coming-soon {
+  padding: 5% 0 1% 4%;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  /* grid-template-rows: 10% 90%; */
+  place-content: center center;
+  place-items: center center;
+  gap: 1em;
+}
+
+.grid-section > div {
+  border: 3px solid rgb(255, 191, 16);
+  min-width: auto;
+  min-height: auto;
+  font-size: 30px;
+  /* padding: 20vh 20vw; */
+}
+
+.item1 {
+  /* grid-area: 1 / 1 / 3/ 3 ; */
+}
 
 
 /*---------- Footer ----------*/
 .footer-div {
   width: 100%;
-  max-width: px;
   margin: 0 auto;
 }
 
 .footer-content {
   background-color: #fff;
-  padding: 2em;
+  padding: 5vw;
 }
 
 .footer-sticky {
-  background-color: #e4000f;
-  padding: 1em;
+  background-color: rgb(255, 191, 16);
+  padding: 15vw;
   margin: 0 auto;
   width: 100%;
   font-size: 1.5em;
@@ -353,13 +382,16 @@ section p {
   text-align: center;
 
   position: sticky;
-  bottom: 40px;
+  bottom: 50px;
   z-index: -1;
+
+
 }
 
 footer {
+
   float: left;
-  background-color: rgb(255, 191, 16);
+  background-color: rgb(0, 0, 0);
   width: 100%;
   text-align: center;
   padding: 10px;
@@ -367,6 +399,7 @@ footer {
 
 .lower-footer {
   font-size: 20px;
+  color: white;
 }
 
 
@@ -374,7 +407,7 @@ footer {
 
 
 /*---------- Media Quiry ----------*/
-/* Phones */
+/* --------Phones--------- */
 @media screen and (min-width:320px) and (max-width:375px) {
    
   /* HERO SECTION */
@@ -453,11 +486,27 @@ footer {
     width: 300px;
   }
 
+  /* ----------------- 6th Section (Comming soon)------------------ */
+
+  .grid-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr) ;
+    place-content: center center;
+    place-items: center center;
+    gap: 3em;
+  }
+
+  .grid-section > div > img {
+    width: 200px;
+  }
+
+
 
 }
 
 
-/* Tables */
+/* ----------------Tables--------------- */
 @media screen and (min-width:376px) and (max-width:748px) {
    
   /* HERO SECTION */
@@ -534,6 +583,20 @@ footer {
   }
     
 
+  /* ----------------- 6th Section (Comming soon)------------------ */
+
+  .grid-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr) ;
+    place-content: center center;
+    place-items: center center;
+    gap: 3em;
+  }
+
+  .grid-section > div > img {
+    width: 400px;
+  }
 
 
 }
