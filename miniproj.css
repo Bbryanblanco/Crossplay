@@ -22,7 +22,7 @@ html {
 }
 
 .collapse {
-  padding-left: 10px;
+  padding-left: 60px;
 }
 
 
@@ -396,7 +396,7 @@ html {
   padding: 5vw;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5 1fr);
-  place-content: start end;
+
 }
 
 .footer-content > div {
@@ -406,8 +406,8 @@ html {
 
 .footer-sticky {
   background-color: rgb(255, 191, 16);
-  padding: 15vw;
-  margin: 0 auto;
+  padding: 10%;
+  margin: 0;
   width: 100%;
   font-size: 1.5em;
   color: white;
