@@ -15,7 +15,3 @@ productContainers.forEach((item, i) => {
     })
 })
 
-
-// window.onload = function () {
-//     document.getElementById("autoplay").play ()
-// }

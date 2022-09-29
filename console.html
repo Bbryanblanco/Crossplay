@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Play</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="miniproj.css" />
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="/Docs/media/CrossPlayFavicon.png"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS (Day13) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap ICON (Day13) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- Flickity -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+</head>
+<body>
+    <!------------------ Hero Section-------------------->
+    <!-- HEADER/NAVBAR (Day13) -->
+    <div class="ps-">
+        <nav
+          class="navbar sticky-top navbar-expand-md"
+          style="background-color: rgb(255, 191, 16)"
+        >
+          <div class="container-fluid" id="home">
+            <a href="#home">
+              <!-- LOGO -->
+              <img class="logo" src="/Docs/media/CrossPlayNew.png" alt="logo" />
+            </a>
+  
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbar_collapse"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar_collapse">
+              <div class="navbar-nav">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#" class="nav-item nav-link">Products</a>
+                <a href="#" class="nav-item nav-link">About Us</a>
+                <a href="#contact-us" class="nav-item nav-link">Contact Us</a>
+              </div>
+              <form class="d-flex">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search" />
+                  <button type="submit" class="btn btn-secondary">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </form>
+              <div class="navbar-nav ms-auto mx-5">
+                <a href="#" class="nav-item nav-link"> Subscribe</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <br />
+      </div>
+      <!-- 2nd NAV BAR (Day15) -->
+      <nav
+        class="nav nav-tabs justify-content-center sticky-top bg-white"
+        style="margin: -5px 0 -20px 0"
+      >
+        <a class="nav-item nav-link active" href="#home"
+          ><i class="bi bi-house-fill"></i> Home</a
+        >
+        <a
+          class="nav-item nav-link dropdown-toggle"
+          href="#playstation"
+          data-bs-toggle="dropdown"
+          ><i class="bi bi-playstation"></i> Playstation</a
+        >
+        <div class="dropdown-menu">
+          <a href="" class="dropdown-item">Consoles</a>
+          <a href="" class="dropdown-item">Games</a>
+          <a href="" class="dropdown-item">Accessories</a>
+        </div>
+  
+        <a
+          class="nav-item nav-link dropdown-toggle"
+          href="#x-box"
+          data-bs-toggle="dropdown"
+          ><i class="bi bi-xbox"></i> X-Box</a
+        >
+  
+        <a
+          class="nav-item nav-link dropdown-toggle"
+          href="#nintendo"
+          data-bs-toggle="dropdown"
+          ><i class="bi bi-nintendo-switch"></i> Nintendo</a
+        >
+      </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!------------ Footer Sticky ------------>
+    <div class="footer-div">
+        <div class="footer-content">
+          <div class="footer1">
+            <dl>
+              <dt><i class="bi bi-patch-check pe-3"></i>Trusted</dt>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, est.</p>
+            </dl>
+          </div>
+          <div class="footer2">
+            <dl>
+              <dt><i class="bi bi-truck pe-3"></i>Fast Shipping</dt>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, est.</p>
+            </dl>
+          </div>
+          <div class="footer3">
+            <dl>
+              <dt><i class="bi bi-gift pe-3"></i>Save</dt>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, est.</p>
+            </dl>
+          </div>
+          <div class="footer4">
+            <dl>
+              <dt><i class="bi bi-shield-lock pe-3"></i>Safe and Secure</dt>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, est.</p>
+            </dl>
+          </div>
+        </div>
+        
+        
+        <!---------- footer-sticky -------->
+  
+        <div class="footer-sticky">
+          <div class="f-sticky1">
+            <dl>
+              <dt><img class="footer-logo" src="/Docs/media/CrossPlayNew.png" alt=""></dt>
+            </dl>
+          </div>
+          <div class="f-sticky2">
+            <dl>
+              <dt>Fast Shipping</dt>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, est.</p>
+            </dl>
+          </div>
+          <div class="f-sticky3">
+            <dl>
+              <dt>Save</dt>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, est.</p>
+            </dl>
+          </div>
+          <div class="f-sticky4">
+            <dl>
+              <dt>Safe and Secure</dt>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, est.</p>
+            </dl>
+          </div>
+        </div>
+      </div>
+  
+      <!---------- lower-footer -------->
+  
+      <footer id="contact-us" class="lower-footer">
+        Copyright &copy;. All rights reserved &reg; Powered by BernardWebWizard
+      </footer>
+</body>
+</html>

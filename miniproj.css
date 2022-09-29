@@ -952,6 +952,7 @@ html {
   .footer-sticky {
     display: flex;
     flex-direction: row;
+    flex-basis: 100%;
     background-color: rgb(255, 191, 16);
     padding: 5%;
     width: 100%;
@@ -966,7 +967,7 @@ html {
   }
 
   .footer-logo {
-    width: 90%;
+    width: 100%;
   }
 
 
