@@ -1,0 +1,11 @@
+Mini Project 2 (PortFolio)
+*must have*
+scroll effect on every section
+paralax effect
+cursor effect
+sticky effect
+over lapping images to image
+sample designs mockups
+3d perspective
+social proofs
+grid effect 
