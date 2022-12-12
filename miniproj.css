@@ -313,12 +313,11 @@ html {
 
 .game-disc {
   width: 400px;
+  transition: 0.3s ease-in-out;
 }
 
 .game-disc:hover {
   transform: scale(1.1);
-  transition: 500ms ease-in-out;
-
 }
 
 
@@ -328,7 +327,7 @@ html {
 
 
 
-/* ------ 6th Section ---------- */
+/* ------ 6th Section (Coming Soon) ---------- */
 
 .coming-soon {
   padding: 5% 0 1% 4%;
@@ -378,9 +377,12 @@ html {
   box-shadow: 0 0 20px 0 rgb(0, 0, 0, 1) ;
 }
 
+.grid-section > img{
+  transition: .3s ease-in-out;
+}
+
 .grid-section > img:hover {
-  transform: scale(1.2);
-  transition: 900ms ease-in-out ;
+  transform: scale(1.1);
   z-index: 2;
 }
 
