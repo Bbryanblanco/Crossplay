@@ -109,7 +109,7 @@ html {
   
 .bg-img {
   width: 100vw;
-  height: 200px;
+  height: 500px;
   z-index: -1 ;
   position: absolute;
   left: -50px;
@@ -128,7 +128,7 @@ html {
 
   
 .product-container {
-  padding: 10px 0vw;
+  padding: 0 20vw;
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -139,14 +139,14 @@ html {
   
   
 .product-card {
-  border: 3px solid rgb(255, 191, 16);
-  /* flex: 0 0 auto; */
+  /* border: 3px solid rgb(255, 191, 16); */
+  flex: 0 0 auto;
   width: 250px;
-  height: 150px;
+  height: 450px;
   margin-right: 10px;
   background-color: rgb(255, 255, 255);
   position: relative;
-  top: 10px;
+  top: 30px;
 }
   
 .product-container::-webkit-scrollbar {
