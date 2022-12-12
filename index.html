@@ -1,595 +1,796 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cross Play</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="miniproj.css" />
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cross Play</title>
-  <!-- External CSS -->
-  <link rel="stylesheet" href="miniproj.css" />
-  <!-- Jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- FAVICON -->
-  <link rel="shortcut icon" href="./Docs/media/CrossPlayFavicon.png" type="image/x-icon" />
-  <!-- Bootstrap CSS (Day13) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-  <!-- Bootstrap ICON (Day13) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-  <!-- Flickity -->
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
-</head>
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="./Docs/media/CrossPlayFavicon.png"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS (Day13) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap ICON (Day13) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- Flickity -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+  </head>
 
-<body>
-  <!------------------ Hero Section-------------------->
-  <!-- HEADER/NAVBAR (Day13) -->
-  <div class="ps-">
-    <nav class="navbar navbar-expand-md" style="background-color: rgb(255, 191, 16)">
-      <div class="container-fluid" id="home">
-        <a href="#home">
-          <!-- LOGO -->
-          <img class="logo" src="./Docs/media/CrossPlayNew.png" alt="logo" />
-        </a>
+  <body>
+    <!------------------ Hero Section-------------------->
+    <!-- HEADER/NAVBAR (Day13) -->
+    <div class="ps-">
+      <nav
+        class="navbar sticky-top navbar-expand-md"
+        style="background-color: rgb(255, 191, 16)"
+      >
+        <div class="container-fluid" id="home">
+          <a href="#home">
+            <!-- LOGO -->
+            <img class="logo" src="./Docs/media/CrossPlayNew.png" alt="logo" />
+          </a>
 
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar_collapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar_collapse">
-          <div class="navbar-nav">
-            <a href="#home" class="nav-item nav-link active">Home</a>
-            <a href="#" class="nav-item nav-link">Products</a>
-            <a href="#" class="nav-item nav-link">About Us</a>
-            <a href="#contact-us" class="nav-item nav-link">Contact Us</a>
-          </div>
-          <form class="d-flex">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search" />
-              <button type="submit" class="btn btn-secondary">
-                <i class="bi bi-search"></i>
-              </button>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar_collapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar_collapse">
+            <div class="navbar-nav">
+              <a href="#home" class="nav-item nav-link active">Home</a>
+              <a href="#" class="nav-item nav-link">Products</a>
+              <a href="#" class="nav-item nav-link">About Us</a>
+              <a href="#contact-us" class="nav-item nav-link">Contact Us</a>
             </div>
-          </form>
-          <div class="navbar-nav ms-auto mx-5">
-            <a href="#" class="nav-item nav-link"> Subscribe</a>
+            <form class="d-flex">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" />
+                <button type="submit" class="btn btn-secondary">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+            <div class="navbar-nav ms-auto mx-5">
+              <a href="#" class="nav-item nav-link"> Subscribe</a>
+            </div>
           </div>
         </div>
+      </nav>
+      <br />
+    </div>
+    <!-- 2nd NAV BAR (Day15) -->
+    <nav
+      class="nav nav-tabs justify-content-center sticky-top bg-white"
+      style="margin: -5px 0 -20px 0"
+    >
+      <a class="nav-item nav-link active" href="#home"
+        ><i class="bi bi-house-fill"></i> Home</a
+      >
+      <a
+        class="nav-item nav-link dropdown-toggle text-dark"
+        href="#playstation"
+        data-bs-toggle="dropdown"
+        ><i class="bi bi-playstation"></i> Playstation</a
+      >
+      <div class="dropdown-menu">
+        <a href="" class="dropdown-item">Consoles</a>
+        <a href="" class="dropdown-item">Games</a>
+        <a href="" class="dropdown-item">Accessories</a>
       </div>
+
+      <a
+        class="nav-item nav-link dropdown-toggle text-dark"
+        href="#x-box"
+        data-bs-toggle="dropdown"
+        ><i class="bi bi-xbox"></i> X-Box</a
+      >
+
+      <a
+        class="nav-item nav-link dropdown-toggle text-dark"
+        href="#nintendo"
+        data-bs-toggle="dropdown"
+        ><i class="bi bi-nintendo-switch"></i> Nintendo</a
+      >
     </nav>
     <br />
-  </div>
-  <!-- 2nd NAV BAR (Day15) -->
-  <nav class="nav nav-tabs justify-content-center sticky-top bg-white" style="margin: -5px 0 -20px 0">
-    <a class="nav-item nav-link active" href="#home"><i class="bi bi-house-fill"></i> Home</a>
-    <a class="nav-item nav-link dropdown-toggle text-dark" href="#playstation" data-bs-toggle="dropdown"><i
-        class="bi bi-playstation"></i> Playstation</a>
-    <div class="dropdown-menu">
-      <a href="./console.html" class="dropdown-item">Consoles</a>
-      <a href="" class="dropdown-item">Games</a>
-      <a href="" class="dropdown-item">Accessories</a>
+    <!-- CAROUSEL (Day15) -->
+    <div
+      class="carousel slide carousel"
+      data-bs-ride="carousel"
+      id="divcarousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-bs-target="#divcarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="2"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="3"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="4"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="5"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="6"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="7"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="8"></li>
+        <li data-bs-target="#divcarousel" data-bs-slide-to="9"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./Docs/media/carouselimg1.png" alt="" />
+        </div>
+        <div class="carousel-item">
+          <img src="./Docs/media/carouselimg2.png" alt="" />
+        </div>
+        <div class="carousel-item">
+          <img src="./Docs/media/carouselimg3.png" alt="" />
+        </div>
+        <div class="carousel-item">
+          <img src="./Docs/media/carouselimg4.png" alt="" />
+        </div>
+        <div class="carousel-item">
+          <img src="./Docs/media/carouselimg5.png" alt="" />
+        </div>
+        <div class="carousel-item">
+          <img src="./Docs/media/carouselimg6.png" alt="" />
+        </div>
+        <div class="carousel-item">
+          <img src="./Docs/media/carouselimg7.png" alt="" />
+        </div>
+        <div class="carousel-item">
+          <img src="./Docs/media/carouselimg8.png" alt="" />
+        </div>
+        <div class="carousel-item">
+          <img src="./Docs/media/carouselimg9.png" alt="" />
+        </div>
+        <div class="carousel-item">
+          <img src="./Docs/media/carouselimg10.png" alt="" />
+        </div>
+      </div>
+      <a
+        href="#divcarousel"
+        class="carousel-control-prev"
+        data-bs-slide-to="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a
+        href="#divcarousel"
+        class="carousel-control-next"
+        data-bs-slide-to="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+    <br /><br />
+
+    <!---------------------- 2nd section (Day8) --------------------------->
+    <h2 class="display-5 text-center">Latest Consoles</h2>
+    <br />
+    <main class="container-fluid">
+      <!------------ PLAYSTATION ------------>
+      <div class="column">
+        <img class="main-img" src="./Docs/media/1-2.png" alt="photo" />
+        <div class="sticky">
+          <img
+            class="main-banner-img"
+            src="./Docs/media/playstationmainimg.png"
+            alt=""
+          />
+        </div>
+        <p>
+          <img
+            class="left"
+            src="https://loremflickr.com/150/150/playstation"
+            alt=""
+          />
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
+          quas, porro molestiae expedita atque ex ipsum fugit excepturi libero
+          voluptatibus maiores similique saepe, quaerat inventore? Impedit ab
+          nemo, sit reiciendis perferendis pariatur beatae dolore assumenda
+          lorem50 veritatis obcaecati sint deserunt et consectetur! Nulla, rem
+          porro quasi, obcaecati, totam quas necessitatibus laborum
+          reprehenderit enim perspiciatis eum. Ab ullam quisquam necessitatibus
+          tempore. Tempora?
+          <img
+            class="right"
+            src="https://loremflickr.com/150/150/games"
+            alt=""
+          />
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+          fugit necessitatibus cupiditate corrupti rerum magni dolorum
+          voluptatem esse dignissimos soluta?Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Incidunt fugit necessitatibus cupiditate
+          corrupti rerum magni dolorum voluptatem esse dignissimos Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Optio aperiam consectetur
+          pariatur repudiandae consequatur ea, in labore. Exercitationem error
+          accusantium quam voluptatibus, numquam doloribus, aspernatur
+          repellendus odio minus nisi praesentium. soluta?Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit. Incidunt fugit necessitatibus
+          cupiditate corrupti rerum magni dolorum voluptatem esse dignissimos
+          soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
+          quidem, odio doloremque cum reiciendis voluptate dicta molestiae
+          veritatis illum exercitationem, incidunt magnam! Eos praesentium aut
+          mollitia, voluptate deleniti ratione laudantium eligendi quo quam
+          consectetur asperiores enim alias possimus molestias soluta dolore.
+          Sint voluptatum blanditiis omnis, vel aspernatur atque praesentium
+          optio animi corrupti corporis odit quam ut dolores id illum commodi
+          possimus? Cupiditate itaque laborum sequi natus, libero saepe expedita
+          non ad aliquam sint porro voluptatibus placeat dolorum facere
+          repudiandae corrupti. Corporis dolorum architecto, qui suscipit ipsam
+          est labore libero possimus recusandae illum harum autem delectus saepe
+          voluptatum animi, rem quasi hic accusamus sit quisquam distinctio.
+          Rerum dolor, vel eveniet repellendus, dolorum pariatur quis
+          consequuntur blanditiis fugiat iure voluptatibus ipsa id laudantium
+          molestiae deleniti aspernatur vero. Similique debitis repellendus
+          laudantium adipisci voluptatibus quaerat corrupti assumenda iure,
+          veniam deleniti quidem expedita ut cumque deserunt alias, aut rem
+          explicabo. Placeat dolore iste eius.
+        </p>
+      </div>
+      <!------------ Xbox ------------>
+      <div class="column">
+        <img class="main-img" src="./Docs/media/2-2.png" alt="" />
+        <div class="sticky">
+          <img
+            class="main-banner-img"
+            src="./Docs/media/xboxmainimg.png"
+            alt=""
+          />
+        </div>
+        <p>
+          <img
+            class="left"
+            src="https://loremflickr.com/150/150/games"
+            alt="An image of animal"
+          />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro commodi
+          temporibus laudantium assumenda voluptatum consequatur accusamus quae
+          obcaecati rerum labore Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quam corporis omnis voluptatum ipsa explicabo
+          aspernatur, expedita iusto optio dolorem animi nostrum nulla dolore
+          nam, mollitia odio quidem magni et quasi, consequatur cupiditate iste?
+          Quam tempore eos laborum ratione ex est necessitatibus facere eaque
+          reiciendis et voluptas, esse voluptatibus obcaecati explicabo?
+          <img
+            class="left"
+            src="https://loremflickr.com/150/150/consoles"
+            alt="An image of animal"
+          />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+          accusamus velit enim illum fuga? Beatae vero, mollitia blanditiis quos
+          iure dicta eos quo maiores voluptates in repellat quas iusto nesciunt
+          ducimus? Fugit voluptatum esse dignissimos, aut rerum earum laboriosam
+          quia rem dolorem delectus illo eveniet, ea consequatur alias.
+          Adipisci, velit. Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Esse dolore minima dolorem cum quaerat quae odio aperiam,
+          repellendus excepturi impedit. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Error velit impedit illo adipisci numquam eaque hic
+          earum praesentium deserunt maxime, aliquid neque similique consequatur
+          fuga iure ea labore iste distinctio natus voluptas expedita?
+          Repellendus est totam veniam dicta quod quam reiciendis velit facilis,
+          vero consequuntur vitae, corrupti minus quaerat id dignissimos saepe
+          quae eum voluptatum. Numquam molestias quibusdam perspiciatis natus
+          aliquam possimus aliquid incidunt ab ea doloremque non id, placeat cum
+          adipisci. Necessitatibus, voluptatum! Sequi harum, enim fugiat quis
+        </p>
+      </div>
+      <!------------ Nintendo ------------>
+      <div class="column">
+        <img class="main-img" src="./Docs/media/3-2.png" alt="" />
+        <div class="sticky">
+          <img
+            class="main-banner-img"
+            src="./Docs/media/nintendomainimg.png"
+            alt=""
+          />
+        </div>
+        <p>
+          <img
+            class="right"
+            src="https://loremflickr.com/150/150/sports"
+            alt=""
+          />
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+          voluptatum iusto itaque. Exercitationem odit reiciendis nam beatae
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+          vitae odio dolorum repellendus maxime laborum possimus iste totam
+          voluptates excepturi! mollitia numquam quibusdam esse officiis, saepe
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+          porro cumque dolore sapiente autem ad delectus tempore, recusandae
+          quos iusto.
+          <img
+            class="right"
+            src="https://loremflickr.com/150/150/sports"
+            alt="An image od Sports"
+          />
+          Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Incidunt fugit necessitatibus cupiditate
+          corrupti rerum magni dolorum voluptatem esse dignissimos soluta?Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fugit
+          necessitatibus cupiditate corrupti rerum magni dolorum voluptatem esse
+          dignissimos soluta?Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Incidunt fugit necessitatibus cupiditate corrupti rerum magni
+          dolorum voluptatem esse dignissimos soluta?adipisicing elit. Inventore
+          consequuntur corporis eum veniam, sit omnis ut maiores consequatur
+          laudantium voluptatum! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Ab voluptate explicabo perspiciatis nostrum?
+          Cupiditate officiis dolorem est odit placeat ex. Quam mollitia
+          delectus ducimus vero praesentium. Eligendi totam deleniti,
+          consequatur earum praesentium ex fugit ad et deserunt quae veritatis
+          excepturi similique. Ipsam rerum iure accusamus nulla perspiciatis
+          esse recusandae! Repudiandae, in atque amet possimus id eaque nisi
+          quidem, eos aspernatur nemo minus, deleniti nam. Dolorem id molestias
+        </p>
+      </div>
+    </main>
+    <br />
+    <br />
+    <!-----------------------3rd Section (Product)-------------------------->
+
+    <section class="product">
+      <h2 class="best-selling">Best Selling</h2>
+      <button class="pre-btn">
+        <img src="./Docs/media/arrow.png" alt="" />
+      </button>
+      <button class="nxt-btn">
+        <img src="./Docs/media/arrow.png" alt="" />
+      </button>
+      <div class="product-container">
+        <img class="bg-img" src="./Docs/media/backgrroundimg.png" alt="" />
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="./Docs/media/ProductPS5.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">PS5</h2>
+            <p class="product-short-description">
+              Disc edition of playstation 5
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="./Docs/media/ProductPS5Digi.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">PS5 Digital edt.</h2>
+            <p class="product-short-description">
+              Digital edition of playstation 5
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="./Docs/media/ProductDualSenseEdge.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Dual Sense Edge</h2>
+            <p class="product-short-description">
+              The new controller for playstation 5
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="./Docs/media/ProductXBOXX.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">X-BOX Series X</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="./Docs/media/ProductXBOXS.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">X-BOX Series S</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="./Docs/media/ProductXController.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Controller</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="./Docs/media/ProductNintendoOled.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Nintendo Switch Oled</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="./Docs/media/ProductNintendoSwitch.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Nintendo Switch</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="./Docs/media/ProductJoycon.png"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Joyson</h2>
+            <p class="product-short-description">
+              a short line about the cloth..
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+
+    <!-----------------------4th Section (Games Carousel)-------------------------->
+
+    <div class="py-5">
+      <h1 class="display-5 mt-3 text-center">Latest Games</h1>
+      <div class="game-carousel mt-3">
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img class="game-disc" src="./Docs/media/gamesps1.png" alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img class="game-disc" src="./Docs/media/gamesps2.png" alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img class="game-disc" src="./Docs/media/gamesps3.png" alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img class="game-disc" src="./Docs/media/gamesps4.png" alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img class="game-disc" src="./Docs/media/gamesps5.png" alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img class="game-disc" src="./Docs/media/gamesps6.png" alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesxbox1.png"
+              alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesxbox2.png"
+              alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesxbox3.png"
+              alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesxbox4.png"
+              alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesxbox5.png"
+              alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesnintendo1.png"
+              alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesnintendo2.png"
+              alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesnintendo3.png"
+              alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesnintendo4.png"
+              alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesnintendo5.png"
+              alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesnintendo6.png"
+              alt="games"
+          /></a>
+        </div>
+        <div class="game-carousel-cell">
+          <a href="#"
+            ><img
+              class="game-disc"
+              src="./Docs/media/gamesnintendo7.png"
+              alt="games"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <!----------------------- 5th Section (Featured Consoles) -------------------------->
+    <div class="py-1 featured-console">
+      <h2 class="display-5 mt-3 ps-5">Featured Console</h2>
+      <a href="#"
+        ><video width="100%" height="100%" loop autoplay>
+          <source src="./Docs/media/FeaturedPS5.mp4" type="video/mp4" /></video
+      ></a>
+    </div>
+    <br />
+
+    <!----------------------- 6th Section (Coming soon) -------------------------->
+    <h2 class="coming-soon">Coming Soon</h2>
+    <section class="grid-section">
+      <img class="item1" src="./Docs/media/comingsoon1.png" alt="" />
+      <img class="item2" src="./Docs/media/comingsoon5.png" alt="" />
+      <img class="item3" src="./Docs/media/comingsoon2.png" alt="" />
+      <img class="item4" src="./Docs/media/comingsoon3.png" alt="" />
+      <img class="item5" src="./Docs/media/comingsoon4.png" alt="" />
+    </section>
+
+    <!------------ Footer Sticky ------------>
+    <div class="footer-div">
+      <div class="footer-content">
+        <div class="footer1">
+          <dl>
+            <dt><i class="bi bi-patch-check pe-3"></i>Trusted</dt>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+              est.
+            </p>
+          </dl>
+        </div>
+        <div class="footer2">
+          <dl>
+            <dt><i class="bi bi-truck pe-3"></i>Fast Shipping</dt>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+              est.
+            </p>
+          </dl>
+        </div>
+        <div class="footer3">
+          <dl>
+            <dt><i class="bi bi-gift pe-3"></i>Save</dt>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+              est.
+            </p>
+          </dl>
+        </div>
+        <div class="footer4">
+          <dl>
+            <dt><i class="bi bi-shield-lock pe-3"></i>Safe and Secure</dt>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+              est.
+            </p>
+          </dl>
+        </div>
+      </div>
+
+      <!---------- footer-sticky -------->
+
+      <div class="footer-sticky">
+        <div class="f-sticky1">
+          <dl>
+            <dt>
+              <img
+                class="footer-logo"
+                src="./Docs/media/CrossPlayNew.png"
+                alt=""
+              />
+            </dt>
+          </dl>
+        </div>
+        <div class="f-sticky2">
+          <dl>
+            <dt>About us</dt>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+              est. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Eveniet consequuntur totam nihil natus minima placeat vero
+              deleniti porro illo impedit!
+            </p>
+          </dl>
+        </div>
+        <div class="f-sticky3">
+          <dl>
+            <dt>Location</dt>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+              est.
+            </p>
+          </dl>
+        </div>
+        <div class="f-sticky4">
+          <dl>
+            <dt>Links</dt>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+              est.
+            </p>
+          </dl>
+        </div>
+      </div>
     </div>
 
-    <a class="nav-item nav-link dropdown-toggle text-dark" href="#x-box" data-bs-toggle="dropdown"><i
-        class="bi bi-xbox"></i> X-Box</a>
+    <!---------- lower-footer -------->
 
-    <a class="nav-item nav-link dropdown-toggle text-dark" href="#nintendo" data-bs-toggle="dropdown"><i
-        class="bi bi-nintendo-switch"></i> Nintendo</a>
-  </nav>
-  <br />
-  <!-- CAROUSEL (Day15) -->
-  <div class="carousel slide carousel" data-bs-ride="carousel" id="divcarousel">
-    <ol class="carousel-indicators">
-      <li data-bs-target="#divcarousel" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#divcarousel" data-bs-slide-to="1"></li>
-      <li data-bs-target="#divcarousel" data-bs-slide-to="2"></li>
-      <li data-bs-target="#divcarousel" data-bs-slide-to="3"></li>
-      <li data-bs-target="#divcarousel" data-bs-slide-to="4"></li>
-      <li data-bs-target="#divcarousel" data-bs-slide-to="5"></li>
-      <li data-bs-target="#divcarousel" data-bs-slide-to="6"></li>
-      <li data-bs-target="#divcarousel" data-bs-slide-to="7"></li>
-      <li data-bs-target="#divcarousel" data-bs-slide-to="8"></li>
-      <li data-bs-target="#divcarousel" data-bs-slide-to="9"></li>
-    </ol>
+    <footer id="contact-us" class="lower-footer">
+      Copyright &copy;. All rights reserved &reg; Powered by BernardWebWizard
+    </footer>
 
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./Docs/media/carouselimg1.png" alt="" />
-      </div>
-      <div class="carousel-item">
-        <img src="./Docs/media/carouselimg2.png" alt="" />
-      </div>
-      <div class="carousel-item">
-        <img src="./Docs/media/carouselimg3.png" alt="" />
-      </div>
-      <div class="carousel-item">
-        <img src="./Docs/media/carouselimg4.png" alt="" />
-      </div>
-      <div class="carousel-item">
-        <img src="./Docs/media/carouselimg5.png" alt="" />
-      </div>
-      <div class="carousel-item">
-        <img src="./Docs/media/carouselimg6.png" alt="" />
-      </div>
-      <div class="carousel-item">
-        <img src="./Docs/media/carouselimg7.png" alt="" />
-      </div>
-      <div class="carousel-item">
-        <img src="./Docs/media/carouselimg8.png" alt="" />
-      </div>
-      <div class="carousel-item">
-        <img src="./Docs/media/carouselimg9.png" alt="" />
-      </div>
-      <div class="carousel-item">
-        <img src="./Docs/media/carouselimg10.png" alt="" />
-      </div>
-    </div>
-    <a href="#divcarousel" class="carousel-control-prev" data-bs-slide-to="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a href="#divcarousel" class="carousel-control-next" data-bs-slide-to="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-  </div>
-  <br /><br />
-
-  <!---------------------- 2nd section (Day8) --------------------------->
-  <h2 class="display-5 text-center">Latest Consoles</h2>
-  <br />
-  <main class="container-fluid">
-    <!------------ PLAYSTATION ------------>
-    <div class="column">
-      <img class="main-img" src="./Docs/media/1-2.png" alt="photo" />
-      <div class="sticky">
-        <img class="main-banner-img" src="./Docs/media/playstationmainimg.png" alt="" />
-      </div>
-      <p>
-        <img class="left" src="https://loremflickr.com/150/150/playstation" alt="" />
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
-        quas, porro molestiae expedita atque ex ipsum fugit excepturi libero
-        voluptatibus maiores similique saepe, quaerat inventore? Impedit ab
-        nemo, sit reiciendis perferendis pariatur beatae dolore assumenda
-        lorem50 veritatis obcaecati sint deserunt et consectetur! Nulla, rem
-        porro quasi, obcaecati, totam quas necessitatibus laborum
-        reprehenderit enim perspiciatis eum. Ab ullam quisquam necessitatibus
-        tempore. Tempora?
-        <img class="right" src="https://loremflickr.com/150/150/games" alt="" />
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
-        fugit necessitatibus cupiditate corrupti rerum magni dolorum
-        voluptatem esse dignissimos soluta?Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Incidunt fugit necessitatibus cupiditate
-        corrupti rerum magni dolorum voluptatem esse dignissimos Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Optio aperiam consectetur
-        pariatur repudiandae consequatur ea, in labore. Exercitationem error
-        accusantium quam voluptatibus, numquam doloribus, aspernatur
-        repellendus odio minus nisi praesentium. soluta?Lorem ipsum dolor sit
-        amet, consectetur adipisicing elit. Incidunt fugit necessitatibus
-        cupiditate corrupti rerum magni dolorum voluptatem esse dignissimos
-        soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
-        quidem, odio doloremque cum reiciendis voluptate dicta molestiae
-        veritatis illum exercitationem, incidunt magnam! Eos praesentium aut
-        mollitia, voluptate deleniti ratione laudantium eligendi quo quam
-        consectetur asperiores enim alias possimus molestias soluta dolore.
-        Sint voluptatum blanditiis omnis, vel aspernatur atque praesentium
-        optio animi corrupti corporis odit quam ut dolores id illum commodi
-        possimus? Cupiditate itaque laborum sequi natus, libero saepe expedita
-        non ad aliquam sint porro voluptatibus placeat dolorum facere
-        repudiandae corrupti. Corporis dolorum architecto, qui suscipit ipsam
-        est labore libero possimus recusandae illum harum autem delectus saepe
-        voluptatum animi, rem quasi hic accusamus sit quisquam distinctio.
-        Rerum dolor, vel eveniet repellendus, dolorum pariatur quis
-        consequuntur blanditiis fugiat iure voluptatibus ipsa id laudantium
-        molestiae deleniti aspernatur vero. Similique debitis repellendus
-        laudantium adipisci voluptatibus quaerat corrupti assumenda iure,
-        veniam deleniti quidem expedita ut cumque deserunt alias, aut rem
-        explicabo. Placeat dolore iste eius.
-      </p>
-    </div>
-    <!------------ Xbox ------------>
-    <div class="column">
-      <img class="main-img" src="./Docs/media/2-2.png" alt="" />
-      <div class="sticky">
-        <img class="main-banner-img" src="./Docs/media/xboxmainimg.png" alt="" />
-      </div>
-      <p>
-        <img class="left" src="https://loremflickr.com/150/150/games" alt="An image of animal" />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro commodi
-        temporibus laudantium assumenda voluptatum consequatur accusamus quae
-        obcaecati rerum labore Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Quam corporis omnis voluptatum ipsa explicabo
-        aspernatur, expedita iusto optio dolorem animi nostrum nulla dolore
-        nam, mollitia odio quidem magni et quasi, consequatur cupiditate iste?
-        Quam tempore eos laborum ratione ex est necessitatibus facere eaque
-        reiciendis et voluptas, esse voluptatibus obcaecati explicabo?
-        <img class="left" src="https://loremflickr.com/150/150/consoles" alt="An image of animal" />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-        accusamus velit enim illum fuga? Beatae vero, mollitia blanditiis quos
-        iure dicta eos quo maiores voluptates in repellat quas iusto nesciunt
-        ducimus? Fugit voluptatum esse dignissimos, aut rerum earum laboriosam
-        quia rem dolorem delectus illo eveniet, ea consequatur alias.
-        Adipisci, velit. Lorem ipsum dolor sit amet consectetur, adipisicing
-        elit. Esse dolore minima dolorem cum quaerat quae odio aperiam,
-        repellendus excepturi impedit. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Error velit impedit illo adipisci numquam eaque hic
-        earum praesentium deserunt maxime, aliquid neque similique consequatur
-        fuga iure ea labore iste distinctio natus voluptas expedita?
-        Repellendus est totam veniam dicta quod quam reiciendis velit facilis,
-        vero consequuntur vitae, corrupti minus quaerat id dignissimos saepe
-        quae eum voluptatum. Numquam molestias quibusdam perspiciatis natus
-        aliquam possimus aliquid incidunt ab ea doloremque non id, placeat cum
-        adipisci. Necessitatibus, voluptatum! Sequi harum, enim fugiat quis
-      </p>
-    </div>
-    <!------------ Nintendo ------------>
-    <div class="column">
-      <img class="main-img" src="./Docs/media/3-2.png" alt="" />
-      <div class="sticky">
-        <img class="main-banner-img" src="./Docs/media/nintendomainimg.png" alt="" />
-      </div>
-      <p>
-        <img class="right" src="https://loremflickr.com/150/150/sports" alt="" />
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-        voluptatum iusto itaque. Exercitationem odit reiciendis nam beatae
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
-        vitae odio dolorum repellendus maxime laborum possimus iste totam
-        voluptates excepturi! mollitia numquam quibusdam esse officiis, saepe
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
-        porro cumque dolore sapiente autem ad delectus tempore, recusandae
-        quos iusto.
-        <img class="right" src="https://loremflickr.com/150/150/sports" alt="An image od Sports" />
-        Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Incidunt fugit necessitatibus cupiditate
-        corrupti rerum magni dolorum voluptatem esse dignissimos soluta?Lorem
-        ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fugit
-        necessitatibus cupiditate corrupti rerum magni dolorum voluptatem esse
-        dignissimos soluta?Lorem ipsum dolor sit amet, consectetur adipisicing
-        elit. Incidunt fugit necessitatibus cupiditate corrupti rerum magni
-        dolorum voluptatem esse dignissimos soluta?adipisicing elit. Inventore
-        consequuntur corporis eum veniam, sit omnis ut maiores consequatur
-        laudantium voluptatum! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Ab voluptate explicabo perspiciatis nostrum?
-        Cupiditate officiis dolorem est odit placeat ex. Quam mollitia
-        delectus ducimus vero praesentium. Eligendi totam deleniti,
-        consequatur earum praesentium ex fugit ad et deserunt quae veritatis
-        excepturi similique. Ipsam rerum iure accusamus nulla perspiciatis
-        esse recusandae! Repudiandae, in atque amet possimus id eaque nisi
-        quidem, eos aspernatur nemo minus, deleniti nam. Dolorem id molestias
-      </p>
-    </div>
-  </main>
-  <br />
-  <br />
-  <!-----------------------3rd Section (Product)-------------------------->
-
-  <section class="product">
-    <h2 class="best-selling">Best Selling</h2>
-    <button class="pre-btn">
-      <img src="./Docs/media/arrow.png" alt="" />
-    </button>
-    <button class="nxt-btn">
-      <img src="./Docs/media/arrow.png" alt="" />
-    </button>
-    <div class="product-container">
-      <img class="bg-img" src="./Docs/media/backgrroundimg.png" alt="" />
-      <div class="product-card">
-        <div class="product-image">
-          <span class="discount-tag">50% off</span>
-          <img src="./Docs/media/ProductPS5.png" class="product-thumb" alt="" />
-          <button class="card-btn">add to wishlist</button>
-        </div>
-        <div class="product-info">
-          <h2 class="product-brand">PS5</h2>
-          <p class="product-short-description">
-            Disc edition of playstation 5
-          </p>
-          <span class="price">$20</span><span class="actual-price">$40</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <span class="discount-tag">50% off</span>
-          <img src="./Docs/media/ProductPS5Digi.png" class="product-thumb" alt="" />
-          <button class="card-btn">add to wishlist</button>
-        </div>
-        <div class="product-info">
-          <h2 class="product-brand">PS5 Digital edt.</h2>
-          <p class="product-short-description">
-            Digital edition of playstation 5
-          </p>
-          <span class="price">$20</span><span class="actual-price">$40</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <span class="discount-tag">50% off</span>
-          <img src="./Docs/media/ProductDualSenseEdge.png" class="product-thumb" alt="" />
-          <button class="card-btn">add to wishlist</button>
-        </div>
-        <div class="product-info">
-          <h2 class="product-brand">Dual Sense Edge</h2>
-          <p class="product-short-description">
-            The new controller for playstation 5
-          </p>
-          <span class="price">$20</span><span class="actual-price">$40</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <span class="discount-tag">50% off</span>
-          <img src="./Docs/media/ProductXBOXX.png" class="product-thumb" alt="" />
-          <button class="card-btn">add to wishlist</button>
-        </div>
-        <div class="product-info">
-          <h2 class="product-brand">X-BOX Series X</h2>
-          <p class="product-short-description">
-            a short line about the cloth..
-          </p>
-          <span class="price">$20</span><span class="actual-price">$40</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <span class="discount-tag">50% off</span>
-          <img src="./Docs/media/ProductXBOXS.png" class="product-thumb" alt="" />
-          <button class="card-btn">add to wishlist</button>
-        </div>
-        <div class="product-info">
-          <h2 class="product-brand">X-BOX Series S</h2>
-          <p class="product-short-description">
-            a short line about the cloth..
-          </p>
-          <span class="price">$20</span><span class="actual-price">$40</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <span class="discount-tag">50% off</span>
-          <img src="./Docs/media/ProductXController.png" class="product-thumb" alt="" />
-          <button class="card-btn">add to wishlist</button>
-        </div>
-        <div class="product-info">
-          <h2 class="product-brand">Controller</h2>
-          <p class="product-short-description">
-            a short line about the cloth..
-          </p>
-          <span class="price">$20</span><span class="actual-price">$40</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <span class="discount-tag">50% off</span>
-          <img src="./Docs/media/ProductNintendoOled.png" class="product-thumb" alt="" />
-          <button class="card-btn">add to wishlist</button>
-        </div>
-        <div class="product-info">
-          <h2 class="product-brand">Nintendo Switch Oled</h2>
-          <p class="product-short-description">
-            a short line about the cloth..
-          </p>
-          <span class="price">$20</span><span class="actual-price">$40</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <span class="discount-tag">50% off</span>
-          <img src="./Docs/media/ProductNintendoSwitch.png" class="product-thumb" alt="" />
-          <button class="card-btn">add to wishlist</button>
-        </div>
-        <div class="product-info">
-          <h2 class="product-brand">Nintendo Switch</h2>
-          <p class="product-short-description">
-            a short line about the cloth..
-          </p>
-          <span class="price">$20</span><span class="actual-price">$40</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <span class="discount-tag">50% off</span>
-          <img src="./Docs/media/ProductJoycon.png" class="product-thumb" alt="" />
-          <button class="card-btn">add to wishlist</button>
-        </div>
-        <div class="product-info">
-          <h2 class="product-brand">Joyson</h2>
-          <p class="product-short-description">
-            a short line about the cloth..
-          </p>
-          <span class="price">$20</span><span class="actual-price">$40</span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br />
-
-  <!-----------------------4th Section (Games Carousel)-------------------------->
-
-  <div class="py-5">
-    <h1 class="display-5 mt-3 text-center">Latest Games</h1>
-    <div class="game-carousel mt-3">
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesps1.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesps2.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesps3.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesps4.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesps5.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesps6.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesxbox1.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesxbox2.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesxbox3.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesxbox4.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesxbox5.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesnintendo1.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesnintendo2.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesnintendo3.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesnintendo4.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesnintendo5.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesnintendo6.png" alt="games" /></a>
-      </div>
-      <div class="game-carousel-cell">
-        <a href="#"><img class="game-disc" src="./Docs/media/gamesnintendo7.png" alt="games" /></a>
-      </div>
-    </div>
-  </div>
-  <br />
-
-  <!----------------------- 5th Section (Featured Consoles) -------------------------->
-  <div class="py-1 featured-console">
-    <h2 class="display-5 mt-3 ps-5">Featured Console</h2>
-    <a href="#"><video width="100%" height="100%" loop autoplay>
-        <source src="./Docs/media/FeaturedPS5.mp4" type="video/mp4" />
-      </video></a>
-  </div>
-  <br />
-
-  <!----------------------- 6th Section (Coming soon) -------------------------->
-  <h2 class="coming-soon">Coming Soon</h2>
-  <section class="grid-section">
-    <img class="item1" src="./Docs/media/comingsoon1.png" alt="" />
-    <img class="item2" src="./Docs/media/comingsoon5.png" alt="" />
-    <img class="item3" src="./Docs/media/comingsoon2.png" alt="" />
-    <img class="item4" src="./Docs/media/comingsoon3.png" alt="" />
-    <img class="item5" src="./Docs/media/comingsoon4.png" alt="" />
-  </section>
-
-  <!------------ Footer Sticky ------------>
-  <div class="footer-div">
-    <div class="footer-content">
-      <div class="footer1">
-        <dl>
-          <dt><i class="bi bi-patch-check pe-3"></i>Trusted</dt>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            est.
-          </p>
-        </dl>
-      </div>
-      <div class="footer2">
-        <dl>
-          <dt><i class="bi bi-truck pe-3"></i>Fast Shipping</dt>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            est.
-          </p>
-        </dl>
-      </div>
-      <div class="footer3">
-        <dl>
-          <dt><i class="bi bi-gift pe-3"></i>Save</dt>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            est.
-          </p>
-        </dl>
-      </div>
-      <div class="footer4">
-        <dl>
-          <dt><i class="bi bi-shield-lock pe-3"></i>Safe and Secure</dt>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            est.
-          </p>
-        </dl>
-      </div>
-    </div>
-
-    <!---------- footer-sticky -------->
-
-    <div class="footer-sticky">
-      <div class="f-sticky1">
-        <dl>
-          <dt>
-            <img class="footer-logo" src="./Docs/media/CrossPlayNew.png" alt="" />
-          </dt>
-        </dl>
-      </div>
-      <div class="f-sticky2">
-        <dl>
-          <dt>About us</dt>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            est. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Eveniet consequuntur totam nihil natus minima placeat vero
-            deleniti porro illo impedit!
-          </p>
-        </dl>
-      </div>
-      <div class="f-sticky3">
-        <dl>
-          <dt>Location</dt>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            est.
-          </p>
-        </dl>
-      </div>
-      <div class="f-sticky4">
-        <dl>
-          <dt>Links</dt>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            est.
-          </p>
-        </dl>
-      </div>
-    </div>
-  </div>
-
-  <!---------- lower-footer -------->
-
-  <footer id="contact-us" class="lower-footer">
-    Copyright &copy;. All rights reserved &reg; Powered by BernardWebWizard
-  </footer>
-
-  <!------------ JS Links ------------>
-  <script src="miniproj.js"></script>
-  <!-- Bootstrap JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-    crossorigin="anonymous"></script>
-  <!-- Flickity -->
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  <script type="text/javascript">
-    $(".game-carousel").flickity({
-      cellAlign: "left",
-      wrapAround: true,
-      freeScroll: true,
-    });
-  </script>
-  <br>
-  <br>
-  <br>
-  <br>
-</body>
-
+    <!------------ JS Links ------------>
+    <script src="miniproj.js"></script>
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Flickity -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script type="text/javascript">
+      $(".game-carousel").flickity({
+        cellAlign: "left",
+        wrapAround: true,
+        freeScroll: true,
+      });
+    </script>
+  </body>
 </html>
